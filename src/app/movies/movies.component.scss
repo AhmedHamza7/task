@@ -1,0 +1,8 @@
+.movie{
+    &:hover{
+        h2{
+            color:rgb(255, 195, 32) !important;
+            letter-spacing: 1.2px;
+        }
+    }
+}

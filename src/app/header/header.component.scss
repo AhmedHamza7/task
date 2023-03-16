@@ -1,0 +1,16 @@
+li:hover {
+    a{
+        background-color: transparent !important;
+    }
+}
+@media (max-width:992px) {
+    ul {
+        width: 100%;
+        flex-wrap: wrap;
+        text-align: end;
+    }
+    ul li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

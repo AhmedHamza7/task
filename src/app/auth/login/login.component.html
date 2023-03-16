@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm" (ngSubmit)="navigateToMovies()">
+    <h2>Log in</h2>
+    <div>
+        <input type="email" placeholder="Email" class="my-1" formControlName="email">
+        <div *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched" class="input-errors">
+            <p *ngIf="loginForm.get('email')?.getError('required')" class="bg-error icon-round text-center py-1">Email is required</p>
+            <p *ngIf="loginForm.get('email')?.getError('email')" class="bg-error icon-round text-center py-1">Email is not valid</p>
+        </div>
+    </div>
+    <div>
+        <input type="password" placeholder="Password" class="my-1" formControlName="password">
+        <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched" class="input-errors">
+            <p *ngIf="loginForm.get('password')?.getError('required')" class="bg-error icon-round text-center py-1">Password is required</p>
+        </div>
+    </div>
+
+        <button type="submit" class="w-100 pointer bg-transparent border-0 text-white py-2 my-2 pointer " [disabled]="loginForm.invalid">
+            Login
+        </button>
+</form>

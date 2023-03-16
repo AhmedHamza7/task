@@ -1,0 +1,18 @@
+<div class="movie-details">
+        <div class="row align-items-center">
+            <div class="col-xl-4 col-md-5 col-sm-12">
+                <img class="w-100" [src]="imgPrefix+movieDetails?.poster_path" alt="">
+            </div>
+            <div class="col-xl-8 col-md-7 col-sm-12 my-sm-4">
+                <h2>{{movieDetails?.title}}</h2>
+                <p class="my-5">{{movieDetails?.overview}}</p>
+                <div class="movie-info">
+                    <ul>
+                        <li>Release-date: {{movieDetails?.release_date | date}}</li>
+                        <li>Language: {{movieDetails?.original_language}}</li>
+                        <li>budget: {{movieDetails?.budget | currency:'USD'}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
